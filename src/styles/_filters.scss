@@ -1,0 +1,56 @@
+.filters {
+  min-width: 200px;
+  margin-right: $gutter;
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 20px;
+  }
+
+  .genres {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .genres li {
+    margin-bottom: 7px;
+  }
+}
+
+.slider {
+  position: relative;
+
+  &__bar {
+    height: 2px;
+    width: 100%;
+    background: $light-grey;
+  }
+
+  &__fill {
+    height: 100%;
+    background: $primary-color;
+  }
+
+  &__handle {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: $primary-color;
+    position: absolute;
+    left: 30%;
+    transform: translateY(-50%);
+  }
+
+  &__handle span {
+    display: block;
+    position: relative;
+    top: calc(100% + 3px);
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: $primary-color;
+  }
+}

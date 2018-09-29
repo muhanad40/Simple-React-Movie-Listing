@@ -8,12 +8,12 @@
   <div class="now-showing">
     <h1 class="now-showing__heading">Now showing</h1>
 
-    <aside class="filters-col">
-      <div class="filters-col__filter">
-        <h2 class="filters-col__filter-title">Genres</h1>
+    <div class="now-showing__content">
+      <aside class="filters">
+        <div class="filters__item">
+          <h2 class="filters__title">Genres</h1>
 
-        <div class="filters-col__filter-ui">
-          <ul>
+          <ul class="genres">
             <li>
               <input checked type="checkbox" id="filter-action"/>
 
@@ -33,40 +33,42 @@
             </li>
           </ul>
         </div>
-      </div>
 
-      <div class="filters-col__filter">
-        <h2 class="filters-col__filter-title">Rating</h1>
+        <div class="filters__item">
+          <h2 class="filters__title">Rating</h1>
 
-        <div class="filters-col__filter-ui">
-          <div class="rating-slider">
-            <div class="rating-slider__handle"></div>
+          <div class="slider">
+            <div class="slider__handle">
+              <span>3</span>
+            </div>
 
-            <div class="rating-slider__fill"></div>
+            <div class="slider__bar">
+              <div class="slider__fill" style="width: 30%;"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </aside>
+      </aside>
 
-    <ul class="movies">
-      <li class="card">
-        <div class="card__image" style="background: url(https://via.placeholder.com/238x304) no-repeat top center">
-          <span class="card__year">2007</span>
-        </div>
-
-        <div class="card__info">
-          <div class="card__copy">
-            <h3 class="card__title">Logan</h3>
-
-            <p class="card__genres">Action, Adventure, Fantasy</p>
+      <ul class="movies">
+        <li class="card">
+          <div class="card__image" style="background: url(https://via.placeholder.com/238x304) no-repeat top center">
+            <span class="card__year">2007</span>
           </div>
 
-          <div class="card__rating">
-            4.0
+          <div class="card__info">
+            <div class="card__copy">
+              <h3 class="card__title">Logan</h3>
+
+              <p class="card__genres">Action, Adventure, Fantasy</p>
+            </div>
+
+            <div class="card__rating">
+              4.0
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <script src="./app.bundle.js"></script>
