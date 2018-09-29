@@ -2,6 +2,7 @@
 @import './variables';
 @import './checkbox';
 @import './filters';
+@import './card';
 
 html {
   box-sizing: border-box;
@@ -9,6 +10,7 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  color: $dark-grey;
 }
 
 *, *:before, *:after {
@@ -16,7 +18,7 @@ body {
 }
 
 .now-showing {
-  max-width: 1000px;
+  max-width: 1280px;
   margin: ($gutter * 2) auto 0;
 
   &__content {
@@ -27,5 +29,25 @@ body {
     font-size: 35px;
     font-weight: bold;
     margin-bottom: $gutter;
+  }
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.movies {
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+  }
+
+  li:nth-child(4n) {
+    margin-right: 0;
   }
 }
