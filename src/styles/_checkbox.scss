@@ -1,0 +1,33 @@
+input[type="checkbox"] {
+  display: none;
+
+  & + label {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  & + label:before {
+    content: '';
+    width: 17px;
+    height: 17px;
+    border-radius: 4px;
+    border: 1px solid $dark-grey;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &:checked + label:before {
+    background-image: url('/src/images/tick.png');
+    background-size: 11px 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  // & + label {
+  //   border: 1px solid red;
+  // }
+}
