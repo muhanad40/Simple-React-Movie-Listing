@@ -1,7 +1,14 @@
 // Colors
+$bg-color: #F8F8F8;
 $primary-color: #FF0079;
 $dark-grey: #404040;
 $light-grey: #D8D8D8;
 
 // Sizes
 $gutter: 20px;
+$breakpoints: (
+  xl: 1280px,
+  lg: 992px,
+  md: 768px,
+  sm: 576px
+);
