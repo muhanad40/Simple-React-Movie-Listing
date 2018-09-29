@@ -5,6 +5,70 @@
 <body>
   <div id="app"></div>
 
+  <div class="now-showing">
+    <h1 class="now-showing__heading">Now showing</h1>
+
+    <aside class="filters-col">
+      <div class="filters-col__filter">
+        <h2 class="filters-col__filter-title">Genres</h1>
+
+        <div class="filters-col__filter-ui">
+          <ul>
+            <li>
+              <input checked type="checkbox" id="filter-action"/>
+
+              <label for="filter-action">Action</label>
+            </li>
+
+            <li>
+              <input type="checkbox" id="filter-drama"/>
+
+              <label for="filter-drama">Drama</label>
+            </li>
+
+            <li>
+              <input type="checkbox" id="filter-adventure"/>
+
+              <label for="filter-adventure">Adventure</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="filters-col__filter">
+        <h2 class="filters-col__filter-title">Rating</h1>
+
+        <div class="filters-col__filter-ui">
+          <div class="rating-slider">
+            <div class="rating-slider__handle"></div>
+
+            <div class="rating-slider__fill"></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <ul class="movies">
+      <li class="card">
+        <div class="card__image" style="background: url(https://via.placeholder.com/238x304) no-repeat top center">
+          <span class="card__year">2007</span>
+        </div>
+
+        <div class="card__info">
+          <div class="card__copy">
+            <h3 class="card__title">Logan</h3>
+
+            <p class="card__genres">Action, Adventure, Fantasy</p>
+          </div>
+
+          <div class="card__rating">
+            4.0
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
   <script src="./app.bundle.js"></script>
 </body>
 </html>
