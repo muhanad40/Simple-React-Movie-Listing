@@ -7,9 +7,8 @@
       "overview": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
       "release_date": "2016-08-03",
       "genre_ids": [
-        14,
         28,
-        80
+        30
       ],
       "id": 297761,
       "original_title": "Suicide Squad",
@@ -27,8 +26,7 @@
       "overview": "The most dangerous former operative of the CIA is drawn out of hiding to uncover hidden truths about his past.",
       "release_date": "2016-07-27",
       "genre_ids": [
-        28,
-        53
+        28
       ],
       "id": 324668,
       "original_title": "Jason Bourne",
@@ -46,9 +44,8 @@
       "overview": "Arthur Bishop thought he had put his murderous past behind him when his most formidable foe kidnaps the love of his life. Now he is forced to travel the globe to complete three impossible assassinations, and do what he does best, make them look like accidents.",
       "release_date": "2016-08-25",
       "genre_ids": [
-        80,
-        28,
-        53
+        29,
+        28
       ],
       "id": 278924,
       "original_title": "Mechanic: Resurrection",
@@ -66,8 +63,7 @@
       "overview": "A high school senior finds herself immersed in an online game of truth or dare, where her every move starts to be manipulated by an anonymous community of \"watchers.\"",
       "release_date": "2016-07-27",
       "genre_ids": [
-        18,
-        53
+        30
       ],
       "id": 328387,
       "original_title": "Nerve",

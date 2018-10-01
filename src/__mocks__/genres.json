@@ -3,6 +3,14 @@
     {
       "id": 28,
       "name": "Action"
+    },
+    {
+      "id": 29,
+      "name": "Drama"
+    },
+    {
+      "id": 30,
+      "name": "Adventure"
     }
   ]
 }

@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
 
-export default class Card extends Component {
-  render() {
-    return (
-      <a href="#" className="card">
-        <div className="card__image" style={{ backgroundImage: 'url(https://via.placeholder.com/238x304' }}>
-          <span className="card__year">2007</span>
-        </div>
+const renderGenres = (genreIds, genres) => {
+  return genreIds.map(genreId => {
+      return genres.filter(genre => genre.id === genreId)[0]
+    })
+    .map(genre => genre.name)
+    .join(', ')
+};
 
-        <div className="card__info">
-          <div className="card__copy">
-            <span className="card__title">Logan</span>
+const Card = (props) => (
+  <a href="#" className="card">
+    <div className="card__image" style={{ backgroundImage: `url(${ props.poster_path })` }}>
+      <span className="card__year">{ props.release_date.split('-')[0] }</span>
+    </div>
 
-            <p className="card__genres">Action, Adventure, Fantasy</p>
-          </div>
+    <div className="card__info">
+      <div className="card__copy">
+        <span className="card__title">{ props.title }</span>
 
-          <div className="card__rating">
-            4.0
-          </div>
-        </div>
-      </a>
-    );
-  }
-}
+        <p className="card__genres">{ renderGenres(props.genre_ids, props.genres) }</p>
+      </div>
+
+      <div className="card__rating">
+        { props.vote_average }
+      </div>
+    </div>
+  </a>
+);
+
+export default Card;
