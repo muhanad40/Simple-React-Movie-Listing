@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -17,9 +17,11 @@
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "file-loader": "^2.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.5.0",
     "jest-cli": "^23.5.0",
     "node-sass": "^4.9.3",
+    "prop-types": "^15.6.2",
     "regenerator-runtime": "^0.12.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
@@ -35,7 +37,10 @@
     "testRegex": "__tests__/(.*).test\\.js$",
     "setupFiles": [
       "<rootDir>/src/__tests__/setup.js"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(s?css|less)$": "identity-obj-proxy"
+    }
   },
   "babel": {
     "presets": [
