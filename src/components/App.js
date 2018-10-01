@@ -7,7 +7,6 @@ import Card from './Card';
 export default class App extends Component {
   componentWillMount() {
     this.props.getNowPlaying();
-    this.props.getGenres();
   }
 
   render() {
@@ -19,15 +18,9 @@ export default class App extends Component {
           <Filters />
 
           <ul className="movies">
-            <li><Card /></li>
-
-            <li><Card /></li>
-
-            <li><Card /></li>
-
-            <li><Card /></li>
-
-            <li><Card /></li>
+            {this.props.movies.map(movie => (
+              <li><Card key={ movie.id } { ...movie } /></li>
+            ))};
           </ul>
         </div>
       </div>
@@ -36,6 +29,5 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-  getNowPlaying: PropTypes.func.isRequired,
-  getGenres: PropTypes.func.isRequired
+  getNowPlaying: PropTypes.func.isRequired
 };

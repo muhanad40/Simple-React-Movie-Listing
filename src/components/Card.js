@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
+export default class Card extends Component {
   render() {
     return (
       <a href="#" className="card">

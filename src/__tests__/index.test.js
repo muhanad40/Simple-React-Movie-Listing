@@ -5,7 +5,8 @@ import { setupCreator } from './utils'
 
 const initProps = {
   getNowPlaying: jest.fn(),
-  getGenres: jest.fn()
+  getGenres: jest.fn(),
+  movies: []
 };
 const setup = setupCreator(App, initProps);
 
@@ -20,9 +21,5 @@ describe('App component', () => {
 
   it('should make ajax call to fetch list of now showing movies on initial render', () => {
     expect(initProps.getNowPlaying).toHaveBeenCalledTimes(1);
-  });
-
-  it('should make ajax call to fetch genres on initial render', () => {
-    expect(initProps.getGenres).toHaveBeenCalledTimes(1);
   });
 });
