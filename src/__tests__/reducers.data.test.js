@@ -54,6 +54,6 @@ describe('Data reducer', () => {
       genres: mockGenres
     });
 
-    expect(newState.genres).toEqual(mockGenres);
+    expect(newState.genres).toEqual(mockGenres.genres);
   });
 });
