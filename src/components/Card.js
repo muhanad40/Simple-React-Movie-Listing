@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { getGenres } from '../utils';
 
+const renderGenres = (genres) => {
+  return genres.map(genre => genre.name).join(', ');
+}
+
 const Card = (props) => (
   <a href="#" className="card">
     <div className="card__image" style={{ backgroundImage: `url(${ props.poster_path })` }}>
@@ -11,7 +15,7 @@ const Card = (props) => (
       <div className="card__copy">
         <span className="card__title">{ props.title }</span>
 
-        <p className="card__genres">{ getGenres(props.genre_ids, props.genres) }</p>
+        <p className="card__genres">{ renderGenres(getGenres(props.genre_ids, props.genres)) }</p>
       </div>
 
       <div className="card__rating">
