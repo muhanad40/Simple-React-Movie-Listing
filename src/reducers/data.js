@@ -1,14 +1,17 @@
 import {
   STORE_NOW_PLAYING,
   STORE_CONFIGURATION,
-  STORE_GENRES
+  STORE_GENRES,
+  STORE_AVAILABLE_GENRES
 } from "../actionTypes";
 import normaliseMovies from '../normalisers/normaliseMovies';
+import { getGenres } from "../utils";
 
 const initialState = {
   configuration: {},
   movies: [],
-  genres: []
+  genres: [],
+  availableGenres: []
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -17,6 +20,14 @@ const dataReducer = (state = initialState, action) => {
       return {
         ...state,
         movies: normaliseMovies(action.movies, state.configuration)
+      };
+
+    case STORE_AVAILABLE_GENRES:
+      const uniqueGenreIds = Array.from(new Set(action.genreIds));
+
+      return {
+        ...state,
+        availableGenres: getGenres(uniqueGenreIds, state.genres),
       };
 
     case STORE_CONFIGURATION:

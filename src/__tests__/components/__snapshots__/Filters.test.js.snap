@@ -1,0 +1,1410 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filters component should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Filters
+    genres={
+      Array [
+        Object {
+          "id": 28,
+          "name": "Action",
+        },
+        Object {
+          "id": 29,
+          "name": "Drama",
+        },
+        Object {
+          "id": 30,
+          "name": "Adventure",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <div
+          className="filters-device-overlay"
+        />,
+        <aside
+          className="filters"
+        >
+          <div
+            className="filters__device-close-btn"
+          >
+            <svg
+              height="17"
+              width="17"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                fill="currentColor"
+                fillRule="nonzero"
+              />
+            </svg>
+          </div>
+          <div
+            className="filters__item"
+          >
+            <h2
+              className="filters__title"
+            >
+              Genres
+            </h2>
+            <ul
+              className="genres"
+            >
+              <li>
+                <input
+                  id="genre-28"
+                  type="checkbox"
+                />
+                <label
+                  htmlFor="genre-28"
+                >
+                  Action
+                </label>
+              </li>
+              <li>
+                <input
+                  id="genre-29"
+                  type="checkbox"
+                />
+                <label
+                  htmlFor="genre-29"
+                >
+                  Drama
+                </label>
+              </li>
+              <li>
+                <input
+                  id="genre-30"
+                  type="checkbox"
+                />
+                <label
+                  htmlFor="genre-30"
+                >
+                  Adventure
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="filters__item"
+          >
+            <h2
+              className="filters__title"
+            >
+              Rating
+            </h2>
+            <div
+              className="slider"
+            >
+              <div
+                className="slider__handle"
+              >
+                <span>
+                  3
+                </span>
+              </div>
+              <div
+                className="slider__bar"
+              >
+                <div
+                  className="slider__fill"
+                  style={
+                    Object {
+                      "width": "30%",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </aside>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "filters-device-overlay",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="filters__device-close-btn"
+            >
+              <svg
+                height="17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                  fill="currentColor"
+                  fillRule="nonzero"
+                />
+              </svg>
+            </div>,
+            <div
+              className="filters__item"
+            >
+              <h2
+                className="filters__title"
+              >
+                Genres
+              </h2>
+              <ul
+                className="genres"
+              >
+                <li>
+                  <input
+                    id="genre-28"
+                    type="checkbox"
+                  />
+                  <label
+                    htmlFor="genre-28"
+                  >
+                    Action
+                  </label>
+                </li>
+                <li>
+                  <input
+                    id="genre-29"
+                    type="checkbox"
+                  />
+                  <label
+                    htmlFor="genre-29"
+                  >
+                    Drama
+                  </label>
+                </li>
+                <li>
+                  <input
+                    id="genre-30"
+                    type="checkbox"
+                  />
+                  <label
+                    htmlFor="genre-30"
+                  >
+                    Adventure
+                  </label>
+                </li>
+              </ul>
+            </div>,
+            <div
+              className="filters__item"
+            >
+              <h2
+                className="filters__title"
+              >
+                Rating
+              </h2>
+              <div
+                className="slider"
+              >
+                <div
+                  className="slider__handle"
+                >
+                  <span>
+                    3
+                  </span>
+                </div>
+                <div
+                  className="slider__bar"
+                >
+                  <div
+                    className="slider__fill"
+                    style={
+                      Object {
+                        "width": "30%",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </div>,
+          ],
+          "className": "filters",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <svg
+                height="17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                  fill="currentColor"
+                  fillRule="nonzero"
+                />
+              </svg>,
+              "className": "filters__device-close-btn",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <path
+                  d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                  fill="currentColor"
+                  fillRule="nonzero"
+                />,
+                "height": "17",
+                "width": "17",
+                "xmlns": "http://www.w3.org/2000/svg",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "d": "M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z",
+                  "fill": "currentColor",
+                  "fillRule": "nonzero",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "path",
+              },
+              "type": "svg",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2
+                  className="filters__title"
+                >
+                  Genres
+                </h2>,
+                <ul
+                  className="genres"
+                >
+                  <li>
+                    <input
+                      id="genre-28"
+                      type="checkbox"
+                    />
+                    <label
+                      htmlFor="genre-28"
+                    >
+                      Action
+                    </label>
+                  </li>
+                  <li>
+                    <input
+                      id="genre-29"
+                      type="checkbox"
+                    />
+                    <label
+                      htmlFor="genre-29"
+                    >
+                      Drama
+                    </label>
+                  </li>
+                  <li>
+                    <input
+                      id="genre-30"
+                      type="checkbox"
+                    />
+                    <label
+                      htmlFor="genre-30"
+                    >
+                      Adventure
+                    </label>
+                  </li>
+                </ul>,
+              ],
+              "className": "filters__item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Genres",
+                  "className": "filters__title",
+                },
+                "ref": null,
+                "rendered": "Genres",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li>
+                      <input
+                        id="genre-28"
+                        type="checkbox"
+                      />
+                      <label
+                        htmlFor="genre-28"
+                      >
+                        Action
+                      </label>
+                    </li>,
+                    <li>
+                      <input
+                        id="genre-29"
+                        type="checkbox"
+                      />
+                      <label
+                        htmlFor="genre-29"
+                      >
+                        Drama
+                      </label>
+                    </li>,
+                    <li>
+                      <input
+                        id="genre-30"
+                        type="checkbox"
+                      />
+                      <label
+                        htmlFor="genre-30"
+                      >
+                        Adventure
+                      </label>
+                    </li>,
+                  ],
+                  "className": "genres",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          id="genre-28"
+                          type="checkbox"
+                        />,
+                        <label
+                          htmlFor="genre-28"
+                        >
+                          Action
+                        </label>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "id": "genre-28",
+                          "type": "checkbox",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Action",
+                          "htmlFor": "genre-28",
+                        },
+                        "ref": null,
+                        "rendered": "Action",
+                        "type": "label",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          id="genre-29"
+                          type="checkbox"
+                        />,
+                        <label
+                          htmlFor="genre-29"
+                        >
+                          Drama
+                        </label>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "id": "genre-29",
+                          "type": "checkbox",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Drama",
+                          "htmlFor": "genre-29",
+                        },
+                        "ref": null,
+                        "rendered": "Drama",
+                        "type": "label",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          id="genre-30"
+                          type="checkbox"
+                        />,
+                        <label
+                          htmlFor="genre-30"
+                        >
+                          Adventure
+                        </label>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "id": "genre-30",
+                          "type": "checkbox",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Adventure",
+                          "htmlFor": "genre-30",
+                        },
+                        "ref": null,
+                        "rendered": "Adventure",
+                        "type": "label",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2
+                  className="filters__title"
+                >
+                  Rating
+                </h2>,
+                <div
+                  className="slider"
+                >
+                  <div
+                    className="slider__handle"
+                  >
+                    <span>
+                      3
+                    </span>
+                  </div>
+                  <div
+                    className="slider__bar"
+                  >
+                    <div
+                      className="slider__fill"
+                      style={
+                        Object {
+                          "width": "30%",
+                        }
+                      }
+                    />
+                  </div>
+                </div>,
+              ],
+              "className": "filters__item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Rating",
+                  "className": "filters__title",
+                },
+                "ref": null,
+                "rendered": "Rating",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div
+                      className="slider__handle"
+                    >
+                      <span>
+                        3
+                      </span>
+                    </div>,
+                    <div
+                      className="slider__bar"
+                    >
+                      <div
+                        className="slider__fill"
+                        style={
+                          Object {
+                            "width": "30%",
+                          }
+                        }
+                      />
+                    </div>,
+                  ],
+                  "className": "slider",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <span>
+                        3
+                      </span>,
+                      "className": "slider__handle",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "3",
+                      },
+                      "ref": null,
+                      "rendered": "3",
+                      "type": "span",
+                    },
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": <div
+                        className="slider__fill"
+                        style={
+                          Object {
+                            "width": "30%",
+                          }
+                        }
+                      />,
+                      "className": "slider__bar",
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "slider__fill",
+                        "style": Object {
+                          "width": "30%",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "div",
+                    },
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "aside",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div
+            className="filters-device-overlay"
+          />,
+          <aside
+            className="filters"
+          >
+            <div
+              className="filters__device-close-btn"
+            >
+              <svg
+                height="17"
+                width="17"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                  fill="currentColor"
+                  fillRule="nonzero"
+                />
+              </svg>
+            </div>
+            <div
+              className="filters__item"
+            >
+              <h2
+                className="filters__title"
+              >
+                Genres
+              </h2>
+              <ul
+                className="genres"
+              >
+                <li>
+                  <input
+                    id="genre-28"
+                    type="checkbox"
+                  />
+                  <label
+                    htmlFor="genre-28"
+                  >
+                    Action
+                  </label>
+                </li>
+                <li>
+                  <input
+                    id="genre-29"
+                    type="checkbox"
+                  />
+                  <label
+                    htmlFor="genre-29"
+                  >
+                    Drama
+                  </label>
+                </li>
+                <li>
+                  <input
+                    id="genre-30"
+                    type="checkbox"
+                  />
+                  <label
+                    htmlFor="genre-30"
+                  >
+                    Adventure
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div
+              className="filters__item"
+            >
+              <h2
+                className="filters__title"
+              >
+                Rating
+              </h2>
+              <div
+                className="slider"
+              >
+                <div
+                  className="slider__handle"
+                >
+                  <span>
+                    3
+                  </span>
+                </div>
+                <div
+                  className="slider__bar"
+                >
+                  <div
+                    className="slider__fill"
+                    style={
+                      Object {
+                        "width": "30%",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </aside>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "filters-device-overlay",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="filters__device-close-btn"
+              >
+                <svg
+                  height="17"
+                  width="17"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                    fill="currentColor"
+                    fillRule="nonzero"
+                  />
+                </svg>
+              </div>,
+              <div
+                className="filters__item"
+              >
+                <h2
+                  className="filters__title"
+                >
+                  Genres
+                </h2>
+                <ul
+                  className="genres"
+                >
+                  <li>
+                    <input
+                      id="genre-28"
+                      type="checkbox"
+                    />
+                    <label
+                      htmlFor="genre-28"
+                    >
+                      Action
+                    </label>
+                  </li>
+                  <li>
+                    <input
+                      id="genre-29"
+                      type="checkbox"
+                    />
+                    <label
+                      htmlFor="genre-29"
+                    >
+                      Drama
+                    </label>
+                  </li>
+                  <li>
+                    <input
+                      id="genre-30"
+                      type="checkbox"
+                    />
+                    <label
+                      htmlFor="genre-30"
+                    >
+                      Adventure
+                    </label>
+                  </li>
+                </ul>
+              </div>,
+              <div
+                className="filters__item"
+              >
+                <h2
+                  className="filters__title"
+                >
+                  Rating
+                </h2>
+                <div
+                  className="slider"
+                >
+                  <div
+                    className="slider__handle"
+                  >
+                    <span>
+                      3
+                    </span>
+                  </div>
+                  <div
+                    className="slider__bar"
+                  >
+                    <div
+                      className="slider__fill"
+                      style={
+                        Object {
+                          "width": "30%",
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+              </div>,
+            ],
+            "className": "filters",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <svg
+                  height="17"
+                  width="17"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                    fill="currentColor"
+                    fillRule="nonzero"
+                  />
+                </svg>,
+                "className": "filters__device-close-btn",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <path
+                    d="M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z"
+                    fill="currentColor"
+                    fillRule="nonzero"
+                  />,
+                  "height": "17",
+                  "width": "17",
+                  "xmlns": "http://www.w3.org/2000/svg",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "d": "M15.783 13.635l-5.518-5.518 5.518-5.52a1.518 1.518 0 0 0 0-2.15 1.517 1.517 0 0 0-2.15 0L8.115 5.966 2.597.446a1.517 1.517 0 0 0-2.15 0 1.518 1.518 0 0 0 0 2.152l5.518 5.519-5.518 5.518a1.518 1.518 0 0 0 0 2.151 1.517 1.517 0 0 0 2.15 0l5.518-5.519 5.518 5.52a1.517 1.517 0 0 0 2.15 0 1.525 1.525 0 0 0 0-2.152z",
+                    "fill": "currentColor",
+                    "fillRule": "nonzero",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "path",
+                },
+                "type": "svg",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2
+                    className="filters__title"
+                  >
+                    Genres
+                  </h2>,
+                  <ul
+                    className="genres"
+                  >
+                    <li>
+                      <input
+                        id="genre-28"
+                        type="checkbox"
+                      />
+                      <label
+                        htmlFor="genre-28"
+                      >
+                        Action
+                      </label>
+                    </li>
+                    <li>
+                      <input
+                        id="genre-29"
+                        type="checkbox"
+                      />
+                      <label
+                        htmlFor="genre-29"
+                      >
+                        Drama
+                      </label>
+                    </li>
+                    <li>
+                      <input
+                        id="genre-30"
+                        type="checkbox"
+                      />
+                      <label
+                        htmlFor="genre-30"
+                      >
+                        Adventure
+                      </label>
+                    </li>
+                  </ul>,
+                ],
+                "className": "filters__item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Genres",
+                    "className": "filters__title",
+                  },
+                  "ref": null,
+                  "rendered": "Genres",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        <input
+                          id="genre-28"
+                          type="checkbox"
+                        />
+                        <label
+                          htmlFor="genre-28"
+                        >
+                          Action
+                        </label>
+                      </li>,
+                      <li>
+                        <input
+                          id="genre-29"
+                          type="checkbox"
+                        />
+                        <label
+                          htmlFor="genre-29"
+                        >
+                          Drama
+                        </label>
+                      </li>,
+                      <li>
+                        <input
+                          id="genre-30"
+                          type="checkbox"
+                        />
+                        <label
+                          htmlFor="genre-30"
+                        >
+                          Adventure
+                        </label>
+                      </li>,
+                    ],
+                    "className": "genres",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            id="genre-28"
+                            type="checkbox"
+                          />,
+                          <label
+                            htmlFor="genre-28"
+                          >
+                            Action
+                          </label>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "id": "genre-28",
+                            "type": "checkbox",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Action",
+                            "htmlFor": "genre-28",
+                          },
+                          "ref": null,
+                          "rendered": "Action",
+                          "type": "label",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            id="genre-29"
+                            type="checkbox"
+                          />,
+                          <label
+                            htmlFor="genre-29"
+                          >
+                            Drama
+                          </label>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "id": "genre-29",
+                            "type": "checkbox",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Drama",
+                            "htmlFor": "genre-29",
+                          },
+                          "ref": null,
+                          "rendered": "Drama",
+                          "type": "label",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            id="genre-30"
+                            type="checkbox"
+                          />,
+                          <label
+                            htmlFor="genre-30"
+                          >
+                            Adventure
+                          </label>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "id": "genre-30",
+                            "type": "checkbox",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Adventure",
+                            "htmlFor": "genre-30",
+                          },
+                          "ref": null,
+                          "rendered": "Adventure",
+                          "type": "label",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2
+                    className="filters__title"
+                  >
+                    Rating
+                  </h2>,
+                  <div
+                    className="slider"
+                  >
+                    <div
+                      className="slider__handle"
+                    >
+                      <span>
+                        3
+                      </span>
+                    </div>
+                    <div
+                      className="slider__bar"
+                    >
+                      <div
+                        className="slider__fill"
+                        style={
+                          Object {
+                            "width": "30%",
+                          }
+                        }
+                      />
+                    </div>
+                  </div>,
+                ],
+                "className": "filters__item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Rating",
+                    "className": "filters__title",
+                  },
+                  "ref": null,
+                  "rendered": "Rating",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div
+                        className="slider__handle"
+                      >
+                        <span>
+                          3
+                        </span>
+                      </div>,
+                      <div
+                        className="slider__bar"
+                      >
+                        <div
+                          className="slider__fill"
+                          style={
+                            Object {
+                              "width": "30%",
+                            }
+                          }
+                        />
+                      </div>,
+                    ],
+                    "className": "slider",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <span>
+                          3
+                        </span>,
+                        "className": "slider__handle",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "3",
+                        },
+                        "ref": null,
+                        "rendered": "3",
+                        "type": "span",
+                      },
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <div
+                          className="slider__fill"
+                          style={
+                            Object {
+                              "width": "30%",
+                            }
+                          }
+                        />,
+                        "className": "slider__bar",
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "className": "slider__fill",
+                          "style": Object {
+                            "width": "30%",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "div",
+                      },
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "aside",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

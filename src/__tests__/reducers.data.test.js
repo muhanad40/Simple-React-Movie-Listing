@@ -2,7 +2,7 @@ import reducer from '../reducers/data';
 import mockNowPlayingMovies from '../__mocks__/now_playing.json';
 import mockConfiguration from '../__mocks__/configuration.json';
 import mockGenres from '../__mocks__/genres.json';
-import { STORE_NOW_PLAYING, STORE_CONFIGURATION, STORE_GENRES } from '../actionTypes';
+import { STORE_NOW_PLAYING, STORE_CONFIGURATION, STORE_GENRES, STORE_AVAILABLE_GENRES } from '../actionTypes';
 import normaliseMovies from '../normalisers/normaliseMovies';
 
 describe('Data reducer', () => {
@@ -55,5 +55,54 @@ describe('Data reducer', () => {
     });
 
     expect(newState.genres).toEqual(mockGenres.genres);
+  });
+
+  it('should store unique movie genres', () => {
+    const expectedGenres = [
+      {
+        id: 1,
+        name: 'Action'
+      },
+      {
+        id: 2,
+        name: 'Drama'
+      },
+      {
+        id: 4,
+        name: 'Horror'
+      }
+    ];
+    const initState = {
+      genres: [
+        {
+          id: 1,
+          name: 'Action'
+        },
+        {
+          id: 2,
+          name: 'Drama'
+        },
+        {
+          id: 3,
+          name: 'Adventure'
+        },
+        {
+          id: 4,
+          name: 'Horror'
+        },
+        {
+          id: 5,
+          name: 'Thriller'
+        },
+      ],
+      availableGenres: [],
+    };
+
+    const newState = reducer(initState, {
+      type: STORE_AVAILABLE_GENRES,
+      genreIds: [1,2,1,4,1,2]
+    });
+
+    expect(newState.availableGenres).toEqual(expectedGenres);
   });
 });

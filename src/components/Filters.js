@@ -17,23 +17,13 @@ export default class Filters extends Component {
             <h2 className="filters__title">Genres</h2>
 
             <ul className="genres">
-              <li>
-                <input type="checkbox" id="filter-action"/>
+              {this.props.genres.map(genre => (
+                <li>
+                  <input type="checkbox" id={ `genre-${ genre.id }` } />
 
-                <label htmlFor="filter-action">Action</label>
-              </li>
-
-              <li>
-                <input type="checkbox" id="filter-drama"/>
-
-                <label htmlFor="filter-drama">Drama</label>
-              </li>
-
-              <li>
-                <input type="checkbox" id="filter-adventure"/>
-
-                <label htmlFor="filter-adventure">Adventure</label>
-              </li>
+                  <label htmlFor={ `genre-${ genre.id }` }>{ genre.name }</label>
+                </li>
+              ))}
             </ul>
           </div>
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Filters from './Filters';
+import FiltersContainer from '../containers/Filters';
 import Card from './Card';
 
 export default class App extends Component {
@@ -17,7 +17,7 @@ export default class App extends Component {
         <h1 className="now-showing__heading">Now showing</h1>
 
         <div className="now-showing__content">
-          <Filters />
+          <FiltersContainer />
 
           <ul className="movies">
             {this.props.movies.map(movie => (

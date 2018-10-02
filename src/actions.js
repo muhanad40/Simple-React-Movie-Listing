@@ -6,7 +6,8 @@ import {
   GET_CONFIGURATION,
   STORE_CONFIGURATION,
   GET_GENRES,
-  STORE_GENRES
+  STORE_GENRES,
+  STORE_AVAILABLE_GENRES
 } from './actionTypes';
 
 export const API = {
@@ -26,6 +27,16 @@ export const API = {
   }
 }
 
+const getMoviesGenreIds = (movies) => {
+  let genreIds = [];
+
+  movies.forEach(movie => {
+    genreIds = genreIds.concat(movie.genre_ids);
+  });
+
+  return Array.from(new Set(genreIds));
+};
+
 export function storeNowPlaying(movies) {
   return {
     type: STORE_NOW_PLAYING,
@@ -41,7 +52,10 @@ export const getNowPlaying = () => {
 
     return fetch(API.nowPlaying)
       .then(res => res.json())
-      .then(movies => dispatch(storeNowPlaying(movies.results)));
+      .then(movies => {
+        dispatch(storeNowPlaying(movies.results));
+        dispatch(storeAvailableGenres(getMoviesGenreIds(movies.results)));
+      });
   }
 }
 
@@ -80,5 +94,12 @@ export const storeGenres = (genres) => {
   return {
     type: STORE_GENRES,
     genres
+  };
+}
+
+export const storeAvailableGenres = (genreIds) => {
+  return {
+    type: STORE_AVAILABLE_GENRES,
+    genreIds
   };
 }

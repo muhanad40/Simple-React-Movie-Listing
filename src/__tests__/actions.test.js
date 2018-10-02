@@ -4,7 +4,8 @@ import { API,
   getGenres,
   storeNowPlaying,
   storeConfiguration,
-  storeGenres
+  storeGenres,
+  storeAvailableGenres
 } from '../actions';
 import {
   GET_NOW_PLAYING,
@@ -12,7 +13,8 @@ import {
   GET_CONFIGURATION,
   STORE_CONFIGURATION,
   GET_GENRES,
-  STORE_GENRES
+  STORE_GENRES,
+  STORE_AVAILABLE_GENRES
 } from '../actionTypes';
 import mockNowPlayingData from '../__mocks__/now_playing.json';
 import mockConfigurationData from '../__mocks__/configuration.json';
@@ -23,23 +25,38 @@ describe('Actions', () => {
     fetch.mockClear();
   });
 
-  it('should fetch now playing movies and dispatch store action', () => {
+  it('should fetch now playing movies, dispatch store action and store available genres', () => {
+    let promise = null;
     const mockDispatch = jest.fn();
+    let expectedAvailableGenreIds = [];
+
     fetch.mockResponseOnce(JSON.stringify(mockNowPlayingData))
 
-    const promise = getNowPlaying()(mockDispatch);
+    mockNowPlayingData.results.forEach(movie => {
+      expectedAvailableGenreIds = expectedAvailableGenreIds.concat(movie.genre_ids);
+    });
+    expectedAvailableGenreIds = Array.from(new Set(expectedAvailableGenreIds));
+    promise = getNowPlaying()(mockDispatch);
 
+    // Check we're calling initial action
     expect(mockDispatch).toHaveBeenCalledWith({
       type: GET_NOW_PLAYING
     });
+    // Check that fetch is called correctly
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(fetch).toHaveBeenCalledWith(API.nowPlaying);
     promise.then(() => {
-      expect(mockDispatch).toHaveBeenLastCalledWith({
+      // Check we're calling the action that store the movies
+      expect(mockDispatch).toHaveBeenCalledWith({
         type: STORE_NOW_PLAYING,
         movies: mockNowPlayingData.results
       });
-      expect(mockDispatch).toHaveBeenCalledTimes(2);
+      // Check that we're calling the action that stores the unique genres
+      expect(mockDispatch).toHaveBeenLastCalledWith({
+        type: STORE_AVAILABLE_GENRES,
+        genreIds: expectedAvailableGenreIds
+      });
+      expect(mockDispatch).toHaveBeenCalledTimes(3);
     });
   });
 
@@ -101,6 +118,23 @@ describe('Actions', () => {
     expect(storeGenres(mockGenresData)).toEqual({
       type: STORE_GENRES,
       genres: mockGenresData
+    });
+  });
+
+  it('should generate action to store available genres', () => {
+    const mockGenres = [
+      {
+        id: 1,
+        name: 'Action'
+      },
+      {
+        id: 2,
+        name: 'Drama'
+      }
+    ];
+    expect(storeAvailableGenres(mockGenres)).toEqual({
+      type: STORE_AVAILABLE_GENRES,
+      genreIds: mockGenres
     });
   });
 });
