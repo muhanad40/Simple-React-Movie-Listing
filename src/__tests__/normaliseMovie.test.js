@@ -25,7 +25,7 @@ describe('normaliseMovie', () => {
   it('should build image path using passed in config', () => {
     expect(normalised).toEqual({
       ...movieObj,
-      poster_path: path.join(config.images.base_url, config.images.poster_sizes[3], movieObj.poster_path)
+      poster_path: config.images.base_url + path.join(config.images.poster_sizes[3], movieObj.poster_path)
     });
   });
 });

@@ -5,6 +5,6 @@ export default function normaliseMovie(movie, config = {}) {
 
   return {
     ...movie,
-    poster_path: path.join(config.images.base_url, posterSize, movie.poster_path)
+    poster_path: config.images.base_url + path.join(posterSize, movie.poster_path)
   }
 }
