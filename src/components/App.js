@@ -6,7 +6,9 @@ import Card from './Card';
 
 export default class App extends Component {
   componentWillMount() {
-    this.props.getNowPlaying();
+    this.props.getConfiguration()
+      .then(this.props.getGenres)
+      .then(this.props.getNowPlaying);
   }
 
   render() {
