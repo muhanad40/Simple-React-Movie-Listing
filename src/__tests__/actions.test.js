@@ -1,7 +1,10 @@
 import { API,
   getNowPlaying,
   getConfiguration,
-  getGenres
+  getGenres,
+  storeNowPlaying,
+  storeConfiguration,
+  storeGenres
 } from '../actions';
 import {
   GET_NOW_PLAYING,
@@ -77,6 +80,27 @@ describe('Actions', () => {
         genres: mockGenresData
       });
       expect(mockDispatch).toHaveBeenCalledTimes(2);
+    });
+  });
+
+  it('should generate action to store now playing movies', () => {
+    expect(storeNowPlaying(mockNowPlayingData)).toEqual({
+      type: STORE_NOW_PLAYING,
+      movies: mockNowPlayingData
+    });
+  });
+
+  it('should generate action to store configuration', () => {
+    expect(storeConfiguration(mockConfigurationData)).toEqual({
+      type: STORE_CONFIGURATION,
+      configuration: mockConfigurationData
+    });
+  });
+
+  it('should generate action to store genres', () => {
+    expect(storeGenres(mockGenresData)).toEqual({
+      type: STORE_GENRES,
+      genres: mockGenresData
     });
   });
 });
