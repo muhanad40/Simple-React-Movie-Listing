@@ -22,7 +22,7 @@ export default class App extends Component {
           <ul className="movies">
             {this.props.movies.map(movie => (
               <li key={ movie.id }><Card { ...movie } genres={ this.props.genres } /></li>
-            ))};
+            ))}
           </ul>
         </div>
       </div>
