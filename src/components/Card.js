@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-
-const renderGenres = (genreIds, genres) => {
-  return genreIds.map(genreId => {
-      return genres.filter(genre => genre.id === genreId)[0]
-    })
-    .map(genre => genre.name)
-    .join(', ')
-};
+import { getGenres } from '../utils';
 
 const Card = (props) => (
   <a href="#" className="card">
@@ -18,7 +11,7 @@ const Card = (props) => (
       <div className="card__copy">
         <span className="card__title">{ props.title }</span>
 
-        <p className="card__genres">{ renderGenres(props.genre_ids, props.genres) }</p>
+        <p className="card__genres">{ getGenres(props.genre_ids, props.genres) }</p>
       </div>
 
       <div className="card__rating">
