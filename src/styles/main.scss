@@ -79,6 +79,7 @@ a {
     margin-right: $gutter;
     margin-bottom: $gutter;
     width: 23%;
+    display: flex;
   }
 
   li:nth-child(4n) {
