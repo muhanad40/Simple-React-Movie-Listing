@@ -19,7 +19,7 @@ export default class App extends Component {
 
           <ul className="movies">
             {this.props.movies.map(movie => (
-              <li><Card key={ movie.id } { ...movie } /></li>
+              <li key={ movie.id }><Card { ...movie } /></li>
             ))};
           </ul>
         </div>
