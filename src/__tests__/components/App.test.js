@@ -1,6 +1,6 @@
 import App from '../../components/App';
 import mockNowPlayingData from '../../__mocks__/now_playing.json';
-import { setupCreator } from '../utils';
+import { setupCreator } from '../test-utils';
 
 const initProps = {
   movies: mockNowPlayingData.results,

@@ -1,7 +1,7 @@
 import Card from '../../components/Card';
 import mockNowPlayingData from '../../__mocks__/now_playing.json';
 import mockGenres from '../../__mocks__/genres.json';
-import { setupCreator } from '../utils';
+import { setupCreator } from '../test-utils';
 
 const movieData = mockNowPlayingData.results[0];
 const setup = setupCreator(Card, {
