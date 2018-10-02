@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 
+import * as actions from '../actions';
 import Filters from '../components/Filters';
 
 const mapStateToProps = (state) => {
@@ -9,4 +10,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Filters);
+export default connect(mapStateToProps, actions)(Filters);

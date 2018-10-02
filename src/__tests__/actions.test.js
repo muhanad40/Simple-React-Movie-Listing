@@ -14,7 +14,8 @@ import {
   STORE_CONFIGURATION,
   GET_GENRES,
   STORE_GENRES,
-  STORE_AVAILABLE_GENRES
+  STORE_AVAILABLE_GENRES,
+  CLONE_MOVIES_FOR_FILTERING
 } from '../actionTypes';
 import mockNowPlayingData from '../__mocks__/now_playing.json';
 import mockConfigurationData from '../__mocks__/configuration.json';
@@ -51,12 +52,16 @@ describe('Actions', () => {
         type: STORE_NOW_PLAYING,
         movies: mockNowPlayingData.results
       });
+      // Check that we're cloning the movies for filtering
+      expect(mockDispatch).toHaveBeenCalledWith({
+        type: CLONE_MOVIES_FOR_FILTERING
+      });
       // Check that we're calling the action that stores the unique genres
-      expect(mockDispatch).toHaveBeenLastCalledWith({
+      expect(mockDispatch).toHaveBeenCalledWith({
         type: STORE_AVAILABLE_GENRES,
         genreIds: expectedAvailableGenreIds
       });
-      expect(mockDispatch).toHaveBeenCalledTimes(3);
+      expect(mockDispatch).toHaveBeenCalledTimes(4);
     });
   });
 

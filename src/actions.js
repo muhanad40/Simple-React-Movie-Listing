@@ -7,7 +7,9 @@ import {
   STORE_CONFIGURATION,
   GET_GENRES,
   STORE_GENRES,
-  STORE_AVAILABLE_GENRES
+  STORE_AVAILABLE_GENRES,
+  CLONE_MOVIES_FOR_FILTERING,
+  FILTER_BY_GENRE
 } from './actionTypes';
 
 export const API = {
@@ -40,7 +42,13 @@ const getMoviesGenreIds = (movies) => {
 export function storeNowPlaying(movies) {
   return {
     type: STORE_NOW_PLAYING,
-    movies: movies
+    movies
+  };
+}
+
+export function cloneMoviesForFiltering() {
+  return {
+    type: CLONE_MOVIES_FOR_FILTERING
   };
 }
 
@@ -54,6 +62,7 @@ export const getNowPlaying = () => {
       .then(res => res.json())
       .then(movies => {
         dispatch(storeNowPlaying(movies.results));
+        dispatch(cloneMoviesForFiltering());
         dispatch(storeAvailableGenres(getMoviesGenreIds(movies.results)));
       });
   }
@@ -103,3 +112,10 @@ export const storeAvailableGenres = (genreIds) => {
     genreIds
   };
 }
+
+export const filterByGenre = (genreIds) => {
+  return {
+    type: FILTER_BY_GENRE,
+    genreIds
+  };
+};

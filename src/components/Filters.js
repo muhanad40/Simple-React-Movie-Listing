@@ -1,6 +1,39 @@
 import React, { Component, Fragment } from 'react';
 
 export default class Filters extends Component {
+  constructor() {
+    super();
+    this.onFilterChange = this.onFilterChange.bind(this);
+    this.state = {
+      selectedGenreIds: []
+    };
+  }
+
+  onFilterChange(e) {
+    const isChecked = e.target.checked;
+    let selectedGenreIds = this.state.selectedGenreIds;
+
+    if (isChecked) {
+      selectedGenreIds = [
+        ...this.state.selectedGenreIds,
+        parseInt(e.target.value, 10)
+      ];
+    } else if (!isChecked) {
+      selectedGenreIds = this.state.selectedGenreIds.filter(genreId => genreId !== parseInt(e.target.value, 10));
+    }
+
+    this.setState({
+      selectedGenreIds
+    }, () => {
+      this.props.filterByGenre(selectedGenreIds);
+
+      // If last filter is unchecked, show all movies (aka clone movies for filter)
+      if (selectedGenreIds.length === 0) {
+        this.props.cloneMoviesForFiltering();
+      }
+    });
+  }
+
   render() {
     return (
       <Fragment>
@@ -19,7 +52,7 @@ export default class Filters extends Component {
             <ul className="genres">
               {this.props.genres.map(genre => (
                 <li key={ genre.id + genre.name }>
-                  <input type="checkbox" id={ `genre-${ genre.id }` } />
+                  <input onChange={ this.onFilterChange } value={ genre.id } type="checkbox" id={ `genre-${ genre.id }` } />
 
                   <label htmlFor={ `genre-${ genre.id }` }>{ genre.name }</label>
                 </li>

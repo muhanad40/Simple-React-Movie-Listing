@@ -2,7 +2,14 @@ import reducer from '../reducers/data';
 import mockNowPlayingMovies from '../__mocks__/now_playing.json';
 import mockConfiguration from '../__mocks__/configuration.json';
 import mockGenres from '../__mocks__/genres.json';
-import { STORE_NOW_PLAYING, STORE_CONFIGURATION, STORE_GENRES, STORE_AVAILABLE_GENRES } from '../actionTypes';
+import {
+  STORE_NOW_PLAYING,
+  STORE_CONFIGURATION,
+  STORE_GENRES,
+  STORE_AVAILABLE_GENRES,
+  FILTER_BY_GENRE,
+  CLONE_MOVIES_FOR_FILTERING
+} from '../actionTypes';
 import normaliseMovies from '../normalisers/normaliseMovies';
 
 describe('Data reducer', () => {
@@ -104,5 +111,48 @@ describe('Data reducer', () => {
     });
 
     expect(newState.availableGenres).toEqual(expectedGenres);
+  });
+
+  it('should clone movies for filtering', () => {
+    const initState = {
+      movies: [1,2,3],
+      filteredMovies: []
+    };
+
+    const newState = reducer(initState, {
+      type: CLONE_MOVIES_FOR_FILTERING
+    });
+
+    expect(newState.filteredMovies).toEqual(initState.movies);
+  });
+
+  it('should filter movies list based on genre', () => {
+    const initState = {
+      movies: [
+        {
+          name: 'Movie 1',
+          genre_ids: [1, 3]
+        },
+        {
+          name: 'Movie 2',
+          genre_ids: [2]
+        },
+        {
+          name: 'Movie 3',
+          genre_ids: [4, 2]
+        }
+      ],
+      filteredMovies: [],
+    };
+
+    const newState = reducer(initState, {
+      type: FILTER_BY_GENRE,
+      genreIds: [2, 4]
+    });
+
+    expect(newState.filteredMovies).toEqual([
+      initState.movies[1],
+      initState.movies[2]
+    ]);
   });
 });

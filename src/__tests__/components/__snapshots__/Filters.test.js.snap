@@ -4,6 +4,8 @@ exports[`Filters component should render correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Filters
+    cloneMoviesForFiltering={[MockFunction]}
+    filterByGenre={[MockFunction]}
     genres={
       Array [
         Object {
@@ -70,7 +72,9 @@ ShallowWrapper {
               <li>
                 <input
                   id="genre-28"
+                  onChange={[Function]}
                   type="checkbox"
+                  value={28}
                 />
                 <label
                   htmlFor="genre-28"
@@ -81,7 +85,9 @@ ShallowWrapper {
               <li>
                 <input
                   id="genre-29"
+                  onChange={[Function]}
                   type="checkbox"
+                  value={29}
                 />
                 <label
                   htmlFor="genre-29"
@@ -92,7 +98,9 @@ ShallowWrapper {
               <li>
                 <input
                   id="genre-30"
+                  onChange={[Function]}
                   type="checkbox"
+                  value={30}
                 />
                 <label
                   htmlFor="genre-30"
@@ -185,7 +193,9 @@ ShallowWrapper {
                 <li>
                   <input
                     id="genre-28"
+                    onChange={[Function]}
                     type="checkbox"
+                    value={28}
                   />
                   <label
                     htmlFor="genre-28"
@@ -196,7 +206,9 @@ ShallowWrapper {
                 <li>
                   <input
                     id="genre-29"
+                    onChange={[Function]}
                     type="checkbox"
+                    value={29}
                   />
                   <label
                     htmlFor="genre-29"
@@ -207,7 +219,9 @@ ShallowWrapper {
                 <li>
                   <input
                     id="genre-30"
+                    onChange={[Function]}
                     type="checkbox"
+                    value={30}
                   />
                   <label
                     htmlFor="genre-30"
@@ -322,7 +336,9 @@ ShallowWrapper {
                   <li>
                     <input
                       id="genre-28"
+                      onChange={[Function]}
                       type="checkbox"
+                      value={28}
                     />
                     <label
                       htmlFor="genre-28"
@@ -333,7 +349,9 @@ ShallowWrapper {
                   <li>
                     <input
                       id="genre-29"
+                      onChange={[Function]}
                       type="checkbox"
+                      value={29}
                     />
                     <label
                       htmlFor="genre-29"
@@ -344,7 +362,9 @@ ShallowWrapper {
                   <li>
                     <input
                       id="genre-30"
+                      onChange={[Function]}
                       type="checkbox"
+                      value={30}
                     />
                     <label
                       htmlFor="genre-30"
@@ -379,7 +399,9 @@ ShallowWrapper {
                     <li>
                       <input
                         id="genre-28"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={28}
                       />
                       <label
                         htmlFor="genre-28"
@@ -390,7 +412,9 @@ ShallowWrapper {
                     <li>
                       <input
                         id="genre-29"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={29}
                       />
                       <label
                         htmlFor="genre-29"
@@ -401,7 +425,9 @@ ShallowWrapper {
                     <li>
                       <input
                         id="genre-30"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={30}
                       />
                       <label
                         htmlFor="genre-30"
@@ -422,7 +448,9 @@ ShallowWrapper {
                       "children": Array [
                         <input
                           id="genre-28"
+                          onChange={[Function]}
                           type="checkbox"
+                          value={28}
                         />,
                         <label
                           htmlFor="genre-28"
@@ -439,7 +467,9 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "id": "genre-28",
+                          "onChange": [Function],
                           "type": "checkbox",
+                          "value": 28,
                         },
                         "ref": null,
                         "rendered": null,
@@ -468,7 +498,9 @@ ShallowWrapper {
                       "children": Array [
                         <input
                           id="genre-29"
+                          onChange={[Function]}
                           type="checkbox"
+                          value={29}
                         />,
                         <label
                           htmlFor="genre-29"
@@ -485,7 +517,9 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "id": "genre-29",
+                          "onChange": [Function],
                           "type": "checkbox",
+                          "value": 29,
                         },
                         "ref": null,
                         "rendered": null,
@@ -514,7 +548,9 @@ ShallowWrapper {
                       "children": Array [
                         <input
                           id="genre-30"
+                          onChange={[Function]}
                           type="checkbox"
+                          value={30}
                         />,
                         <label
                           htmlFor="genre-30"
@@ -531,7 +567,9 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "id": "genre-30",
+                          "onChange": [Function],
                           "type": "checkbox",
+                          "value": 30,
                         },
                         "ref": null,
                         "rendered": null,
@@ -749,7 +787,9 @@ ShallowWrapper {
                 <li>
                   <input
                     id="genre-28"
+                    onChange={[Function]}
                     type="checkbox"
+                    value={28}
                   />
                   <label
                     htmlFor="genre-28"
@@ -760,7 +800,9 @@ ShallowWrapper {
                 <li>
                   <input
                     id="genre-29"
+                    onChange={[Function]}
                     type="checkbox"
+                    value={29}
                   />
                   <label
                     htmlFor="genre-29"
@@ -771,7 +813,9 @@ ShallowWrapper {
                 <li>
                   <input
                     id="genre-30"
+                    onChange={[Function]}
                     type="checkbox"
+                    value={30}
                   />
                   <label
                     htmlFor="genre-30"
@@ -864,7 +908,9 @@ ShallowWrapper {
                   <li>
                     <input
                       id="genre-28"
+                      onChange={[Function]}
                       type="checkbox"
+                      value={28}
                     />
                     <label
                       htmlFor="genre-28"
@@ -875,7 +921,9 @@ ShallowWrapper {
                   <li>
                     <input
                       id="genre-29"
+                      onChange={[Function]}
                       type="checkbox"
+                      value={29}
                     />
                     <label
                       htmlFor="genre-29"
@@ -886,7 +934,9 @@ ShallowWrapper {
                   <li>
                     <input
                       id="genre-30"
+                      onChange={[Function]}
                       type="checkbox"
+                      value={30}
                     />
                     <label
                       htmlFor="genre-30"
@@ -1001,7 +1051,9 @@ ShallowWrapper {
                     <li>
                       <input
                         id="genre-28"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={28}
                       />
                       <label
                         htmlFor="genre-28"
@@ -1012,7 +1064,9 @@ ShallowWrapper {
                     <li>
                       <input
                         id="genre-29"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={29}
                       />
                       <label
                         htmlFor="genre-29"
@@ -1023,7 +1077,9 @@ ShallowWrapper {
                     <li>
                       <input
                         id="genre-30"
+                        onChange={[Function]}
                         type="checkbox"
+                        value={30}
                       />
                       <label
                         htmlFor="genre-30"
@@ -1058,7 +1114,9 @@ ShallowWrapper {
                       <li>
                         <input
                           id="genre-28"
+                          onChange={[Function]}
                           type="checkbox"
+                          value={28}
                         />
                         <label
                           htmlFor="genre-28"
@@ -1069,7 +1127,9 @@ ShallowWrapper {
                       <li>
                         <input
                           id="genre-29"
+                          onChange={[Function]}
                           type="checkbox"
+                          value={29}
                         />
                         <label
                           htmlFor="genre-29"
@@ -1080,7 +1140,9 @@ ShallowWrapper {
                       <li>
                         <input
                           id="genre-30"
+                          onChange={[Function]}
                           type="checkbox"
+                          value={30}
                         />
                         <label
                           htmlFor="genre-30"
@@ -1101,7 +1163,9 @@ ShallowWrapper {
                         "children": Array [
                           <input
                             id="genre-28"
+                            onChange={[Function]}
                             type="checkbox"
+                            value={28}
                           />,
                           <label
                             htmlFor="genre-28"
@@ -1118,7 +1182,9 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "id": "genre-28",
+                            "onChange": [Function],
                             "type": "checkbox",
+                            "value": 28,
                           },
                           "ref": null,
                           "rendered": null,
@@ -1147,7 +1213,9 @@ ShallowWrapper {
                         "children": Array [
                           <input
                             id="genre-29"
+                            onChange={[Function]}
                             type="checkbox"
+                            value={29}
                           />,
                           <label
                             htmlFor="genre-29"
@@ -1164,7 +1232,9 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "id": "genre-29",
+                            "onChange": [Function],
                             "type": "checkbox",
+                            "value": 29,
                           },
                           "ref": null,
                           "rendered": null,
@@ -1193,7 +1263,9 @@ ShallowWrapper {
                         "children": Array [
                           <input
                             id="genre-30"
+                            onChange={[Function]}
                             type="checkbox"
+                            value={30}
                           />,
                           <label
                             htmlFor="genre-30"
@@ -1210,7 +1282,9 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "id": "genre-30",
+                            "onChange": [Function],
                             "type": "checkbox",
+                            "value": 30,
                           },
                           "ref": null,
                           "rendered": null,

@@ -6,7 +6,7 @@ import App from '../components/App';
 
 const mapStateToProps = (state) => {
   return {
-    movies: state.data.movies,
+    movies: state.data.filteredMovies,
     genres: state.data.genres
   }
 };
