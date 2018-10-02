@@ -3,6 +3,7 @@ import {
   STORE_CONFIGURATION,
   STORE_GENRES
 } from "../actionTypes";
+import normaliseMovies from '../normalisers/normaliseMovies';
 
 const initialState = {
   configuration: {},
@@ -15,7 +16,7 @@ const dataReducer = (state = initialState, action) => {
     case STORE_NOW_PLAYING:
       return {
         ...state,
-        movies: action.movies
+        movies: normaliseMovies(action.movies, state.configuration)
       };
 
     case STORE_CONFIGURATION:
