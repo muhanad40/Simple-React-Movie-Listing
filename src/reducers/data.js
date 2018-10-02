@@ -28,7 +28,7 @@ const dataReducer = (state = initialState, action) => {
     case STORE_GENRES:
       return {
         ...state,
-        genres: action.genres
+        genres: action.genres.genres
       };
 
     default:
