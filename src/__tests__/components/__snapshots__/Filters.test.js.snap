@@ -416,7 +416,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "28Action",
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
@@ -462,7 +462,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "29Drama",
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
@@ -508,7 +508,7 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-                    "key": undefined,
+                    "key": "30Adventure",
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
@@ -1095,7 +1095,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-                      "key": undefined,
+                      "key": "28Action",
                       "nodeType": "host",
                       "props": Object {
                         "children": Array [
@@ -1141,7 +1141,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": undefined,
+                      "key": "29Drama",
                       "nodeType": "host",
                       "props": Object {
                         "children": Array [
@@ -1187,7 +1187,7 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-                      "key": undefined,
+                      "key": "30Adventure",
                       "nodeType": "host",
                       "props": Object {
                         "children": Array [

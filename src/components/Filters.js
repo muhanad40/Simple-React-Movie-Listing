@@ -18,7 +18,7 @@ export default class Filters extends Component {
 
             <ul className="genres">
               {this.props.genres.map(genre => (
-                <li>
+                <li key={ genre.id + genre.name }>
                   <input type="checkbox" id={ `genre-${ genre.id }` } />
 
                   <label htmlFor={ `genre-${ genre.id }` }>{ genre.name }</label>
