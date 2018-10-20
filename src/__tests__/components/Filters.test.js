@@ -5,19 +5,20 @@ import { setupCreator } from '../test-utils';
 const initProps = {
   cloneMoviesForFiltering: jest.fn(),
   filterByGenre: jest.fn(),
-  genres: mockGenres.genres
+  genres: mockGenres.genres,
+  filterByRating: jest.fn()
 };
 const setup = setupCreator(Filters, initProps);
 
 describe('Filters component', () => {
-  let wrapper
+  let wrapper, instance;
 
   beforeAll(() => {
-    ({ wrapper } = setup());
+    ({ wrapper, instance } = setup());
   });
 
   it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(instance).toMatchSnapshot();
   });
 
   it('should add selected filters to state', () => {
@@ -86,5 +87,15 @@ describe('Filters component', () => {
     });
 
     expect(initProps.cloneMoviesForFiltering).toHaveBeenCalledTimes(1);
+  });
+
+  it('should pass change callback to Slider', () => {
+    expect(wrapper.find('.rating-slider').props().onChange).toEqual(instance.onRatingSliderChange);
+  });
+
+  it('should call `filterByRating` prop when slider callback is called', () => {
+    instance.onRatingSliderChange(4);
+
+    expect(initProps.filterByRating).toHaveBeenCalledWith(4);
   });
 });

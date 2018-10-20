@@ -5,7 +5,8 @@ import { API,
   storeNowPlaying,
   storeConfiguration,
   storeGenres,
-  storeAvailableGenres
+  storeAvailableGenres,
+  filterByRating
 } from '../actions';
 import {
   GET_NOW_PLAYING,
@@ -15,7 +16,8 @@ import {
   GET_GENRES,
   STORE_GENRES,
   STORE_AVAILABLE_GENRES,
-  CLONE_MOVIES_FOR_FILTERING
+  CLONE_MOVIES_FOR_FILTERING,
+  FILTER_BY_RATING
 } from '../actionTypes';
 import mockNowPlayingData from '../__mocks__/now_playing.json';
 import mockConfigurationData from '../__mocks__/configuration.json';
@@ -142,4 +144,11 @@ describe('Actions', () => {
       genreIds: mockGenres
     });
   });
+
+  it('should generate action to filter by rating', () => {
+    expect(filterByRating(5)).toEqual({
+      type: FILTER_BY_RATING,
+      minRating: 5
+    });
+  })
 });

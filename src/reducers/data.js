@@ -4,7 +4,8 @@ import {
   STORE_GENRES,
   STORE_AVAILABLE_GENRES,
   FILTER_BY_GENRE,
-  CLONE_MOVIES_FOR_FILTERING
+  CLONE_MOVIES_FOR_FILTERING,
+  FILTER_BY_RATING
 } from "../actionTypes";
 import normaliseMovies from '../normalisers/normaliseMovies';
 import { getGenres } from "../utils";
@@ -45,8 +46,7 @@ const dataReducer = (state = initialState, action) => {
         genres: action.genres.genres
       };
 
-    case FILTER_BY_GENRE:
-      console.log(action.genreIds)
+      case FILTER_BY_GENRE:
       const filteredMovies = [];
 
       state.movies.forEach(movie => {
@@ -59,22 +59,22 @@ const dataReducer = (state = initialState, action) => {
         });
       });
 
-
       return {
         ...state,
         filteredMovies
       }
 
-      case CLONE_MOVIES_FOR_FILTERING:
-        return {
-          ...state,
-          filteredMovies: state.movies.slice(0)
-        };
-
+    case CLONE_MOVIES_FOR_FILTERING:
       return {
         ...state,
-        filteredMovies
-      }
+        filteredMovies: state.movies.slice(0)
+      };
+
+    case FILTER_BY_RATING:
+      return {
+        ...state,
+        filteredMovies: state.movies.filter(movie => movie.vote_average >= action.minRating)
+      };
 
     default:
       return state;

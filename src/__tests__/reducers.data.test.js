@@ -8,7 +8,8 @@ import {
   STORE_GENRES,
   STORE_AVAILABLE_GENRES,
   FILTER_BY_GENRE,
-  CLONE_MOVIES_FOR_FILTERING
+  CLONE_MOVIES_FOR_FILTERING,
+  FILTER_BY_RATING
 } from '../actionTypes';
 import normaliseMovies from '../normalisers/normaliseMovies';
 
@@ -153,6 +154,36 @@ describe('Data reducer', () => {
     expect(newState.filteredMovies).toEqual([
       initState.movies[1],
       initState.movies[2]
+    ]);
+  });
+
+  it('should filter movies list based on minimum rating value', () => {
+    const initState = {
+      movies: [
+        {
+          name: 'Movie 1',
+          vote_average: 4
+        },
+        {
+          name: 'Movie 2',
+          vote_average: 5.5
+        },
+        {
+          name: 'Movie 3',
+          vote_average: 3
+        }
+      ],
+      filteredMovies: [],
+    };
+
+    const newState = reducer(initState, {
+      type: FILTER_BY_RATING,
+      minRating: 4
+    });
+
+    expect(newState.filteredMovies).toEqual([
+      initState.movies[0],
+      initState.movies[1]
     ]);
   });
 });

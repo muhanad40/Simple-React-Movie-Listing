@@ -1,12 +1,19 @@
 import React, { Component, Fragment } from 'react';
 
+import Slider from 'rc-slider';
+
 export default class Filters extends Component {
   constructor() {
     super();
     this.onFilterChange = this.onFilterChange.bind(this);
+    this.onRatingSliderChange = this.onRatingSliderChange.bind(this);
     this.state = {
       selectedGenreIds: []
     };
+  }
+
+  onRatingSliderChange(minRating) {
+    this.props.filterByRating(minRating);
   }
 
   onFilterChange(e) {
@@ -63,15 +70,26 @@ export default class Filters extends Component {
           <div className="filters__item">
             <h2 className="filters__title">Rating</h2>
 
-            <div className="slider">
-              <div className="slider__handle">
-                <span>3</span>
-              </div>
-
-              <div className="slider__bar">
-                <div className="slider__fill" style={{ width: '30%' }}></div>
-              </div>
-            </div>
+            <Slider
+              className="rating-slider"
+              onChange={ this.onRatingSliderChange }
+              defaultValue={ 3 }
+              step={ 0.5 }
+              min={ 0 }
+              max={ 10 }
+              handle={ (props) => {
+                return (
+                  <div
+                    className="rating-slider__handle"
+                    style={{
+                      left: `${props.offset}%`
+                    }}
+                  >
+                    <span>{ props.value }</span>
+                  </div>
+                );
+              }}
+            />
           </div>
         </aside>
       </Fragment>
