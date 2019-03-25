@@ -16,6 +16,7 @@ Used to Redux to manage the state and Jest for unit tests. The design is from th
 - Resizing window to mobile size doesn't show a menu icon to display the filters. This needs to be implemented
 - Would move each test file adjacent to the component/file it's testing instead of putting all of them in one folder
 - Would modify my tests to only test intended behaviour rather than implementation details
+- Add proptypes to components
 
 ### How to run:
 - `git clone git@github.com:muhanad40/Simple-React-Movie-Listing.git`
