@@ -136,7 +136,7 @@ describe('Data reducer', () => {
         },
         {
           name: 'Movie 2',
-          genre_ids: [2]
+          genre_ids: [2, 1, 3]
         },
         {
           name: 'Movie 3',
@@ -148,12 +148,11 @@ describe('Data reducer', () => {
 
     const newState = reducer(initState, {
       type: FILTER_BY_GENRE,
-      genreIds: [2, 4]
+      genreIds: [1, 2, 3]
     });
 
     expect(newState.filteredMovies).toEqual([
-      initState.movies[1],
-      initState.movies[2]
+      initState.movies[1]
     ]);
   });
 

@@ -46,17 +46,15 @@ const dataReducer = (state = initialState, action) => {
         genres: action.genres.genres
       };
 
-      case FILTER_BY_GENRE:
+    case FILTER_BY_GENRE:
       const filteredMovies = [];
 
       state.movies.forEach(movie => {
-        action.genreIds.forEach(filterGenreId => {
-          const isNotAddedYet = filteredMovies.indexOf(movie) === -1;
+        const hasAllGenres = action.genreIds.every(genre => movie.genre_ids.indexOf(genre) !== -1);
 
-          if (movie.genre_ids.indexOf(filterGenreId) !== -1 && isNotAddedYet) {
-            filteredMovies.push(movie);
-          }
-        });
+        if(hasAllGenres) {
+          filteredMovies.push(movie);
+        }
       });
 
       return {
