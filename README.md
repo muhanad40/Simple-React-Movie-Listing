@@ -13,6 +13,7 @@ This is a technical test submission. Here are the tasks:
 Used to Redux to manage the state and Jest for unit tests. The design is from the internet, found a simple Sketch file ;)
 
 ### Improvements
+- Make the initial render filter movies by rating. Currently it only filters by rating when using the slider.
 - Resizing window to mobile size doesn't show a menu icon to display the filters. This needs to be implemented
 - Would move each test file adjacent to the component/file it's testing instead of putting all of them in one folder
 - Would modify my tests to only test intended behaviour rather than implementation details
