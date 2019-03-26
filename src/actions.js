@@ -10,7 +10,8 @@ import {
   STORE_AVAILABLE_GENRES,
   CLONE_MOVIES_FOR_FILTERING,
   FILTER_BY_GENRE,
-  FILTER_BY_RATING
+  FILTER_BY_RATING,
+  SET_MIN_RATING
 } from './actionTypes';
 
 export const API = {
@@ -124,6 +125,13 @@ export const filterByGenre = (genreIds) => {
 export const filterByRating = (minRating) => {
   return {
     type: FILTER_BY_RATING,
+    minRating
+  };
+};
+
+export const setMinRating = (minRating) => {
+  return {
+    type: SET_MIN_RATING,
     minRating
   };
 };

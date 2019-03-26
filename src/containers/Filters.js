@@ -6,7 +6,8 @@ import Filters from '../components/Filters';
 
 const mapStateToProps = (state) => {
   return {
-    genres: state.data.availableGenres
+    genres: state.data.availableGenres,
+    minRating: state.data.minRating
   };
 };
 

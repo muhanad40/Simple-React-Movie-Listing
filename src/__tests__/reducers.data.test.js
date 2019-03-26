@@ -158,6 +158,7 @@ describe('Data reducer', () => {
 
   it('should filter movies list based on minimum rating value', () => {
     const initState = {
+      minRating: 4,
       movies: [
         {
           name: 'Movie 1',
@@ -177,7 +178,6 @@ describe('Data reducer', () => {
 
     const newState = reducer(initState, {
       type: FILTER_BY_RATING,
-      minRating: 4
     });
 
     expect(newState.filteredMovies).toEqual([

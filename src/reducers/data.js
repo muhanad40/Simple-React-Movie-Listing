@@ -5,7 +5,8 @@ import {
   STORE_AVAILABLE_GENRES,
   FILTER_BY_GENRE,
   CLONE_MOVIES_FOR_FILTERING,
-  FILTER_BY_RATING
+  FILTER_BY_RATING,
+  SET_MIN_RATING
 } from "../actionTypes";
 import normaliseMovies from '../normalisers/normaliseMovies';
 import { getGenres } from "../utils";
@@ -15,7 +16,8 @@ const initialState = {
   movies: [],
   genres: [],
   availableGenres: [],
-  filteredMovies: []
+  filteredMovies: [],
+  minRating: 3,
 };
 
 const dataReducer = (state = initialState, action) => {
@@ -71,7 +73,13 @@ const dataReducer = (state = initialState, action) => {
     case FILTER_BY_RATING:
       return {
         ...state,
-        filteredMovies: state.movies.filter(movie => movie.vote_average >= action.minRating)
+        filteredMovies: state.movies.filter(movie => movie.vote_average >= state.minRating)
+      };
+
+    case SET_MIN_RATING:
+      return {
+        ...state,
+        minRating: action.minRating
       };
 
     default:

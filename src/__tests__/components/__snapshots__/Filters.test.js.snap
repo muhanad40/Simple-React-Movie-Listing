@@ -142,7 +142,6 @@ Filters {
             <ComponentEnhancer(undefined)
               activeDotStyle={Object {}}
               className="rating-slider"
-              defaultValue={3}
               disabled={false}
               dotStyle={Object {}}
               dots={false}

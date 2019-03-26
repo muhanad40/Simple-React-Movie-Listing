@@ -73,7 +73,7 @@ export default class Filters extends Component {
             <Slider
               className="rating-slider"
               onChange={ this.onRatingSliderChange }
-              defaultValue={ 3 }
+              defaultValue={ this.props.minRating }
               step={ 0.5 }
               min={ 0 }
               max={ 10 }
